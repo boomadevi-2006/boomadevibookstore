@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BOOMADEVI BOOKSTOREk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="container p-5 my-5 text-center" 
+        style="background: url('image/hp.jpg') no-repeat center center; background-size: cover;">
+    <h1>
+        <img src="image/logo.jpg" alt="No Image" width="80" height="80" class="logo">
+        BOOMADEVI BOOKSTORE
+    </h1>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Boomadevi Bookstore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="billcalculator.html">Billcalculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="feedback.html">Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="signupandlogin.html">Signup/Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Feedback Form Section -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">  <!-- Box width adjustment -->
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center mb-4">Feedback Form</h2>
+                <form id="feedbackForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <span id="nameError" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <span id="emailError" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Feedback:</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        <span id="messageError" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Rate Us:</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                        </div>
+                        <span id="ratingError" class="text-danger small"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Validation -->
+<script>
+document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let rating = document.querySelector('input[name="rating"]:checked');
+
+    // Clear previous error messages
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("messageError").innerText = "";
+    document.getElementById("ratingError").innerText = "";
+
+    let isValid = true;
+
+    // Validate Name (Must start with an uppercase letter)
+    if (!/^[A-Z][a-zA-Z ]*$/.test(name)) {
+        document.getElementById("nameError").innerText = "Name must start with a capital letter.";
+        isValid = false;
+    }
+
+    // Validate Email (Proper format)
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById("emailError").innerText = "Enter a valid email address.";
+        isValid = false;
+    }
+
+    // Validate Message (Minimum 10 characters)
+    if (message.length < 10) {
+        document.getElementById("messageError").innerText = "Feedback must be at least 10 characters long.";
+        isValid = false;
+    }
+
+    // Validate Rating (Must select one)
+    if (!rating) {
+        document.getElementById("ratingError").innerText = "Please select a rating.";
+        isValid = false;
+    }
+
+    // If all validations pass, show a success message and reset the form
+    if (isValid) {
+        alert(`Thank you, ${name}! Your feedback has been submitted.`);
+        document.getElementById("feedbackForm").reset();
+    }
+});
+</script>
+
+</body>
+</html>

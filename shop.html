@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BOOMADEVI BOOKSTORE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+<header class="container p-5 my-5  text-center" style="background: url('image/hp.jpg') no-repeat center center; background-size: cover;">
+    <h1><img src="image/logo.jpg" alt="No Image" width="80" height="80 " class="logo" >
+        BOOMADEVI BOOKSTORE</h1>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Boomadevi Bookstore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="#romancebook">Romance Books</a></li>
+                        <li><a class="dropdown-item" href="#horrorbook">Horror Books</a></li>
+                        <li><a class="dropdown-item" href="#thrillerbook">Mystery/Thriller Books</a></li>
+                        <li><a class="dropdown-item" href="#childrenbook">Children Books</a></li>
+                        <li><a class="dropdown-item" href="#comic">Comic Books</a></li>
+                        <li><a class="dropdown-item" href="#fantasy">Fantasy Books</a></li>
+                        <li><a class="dropdown-item" href="#disneybook">Disney Books</a></li>
+                        <li><a class="dropdown-item" href="#scienceandtechnology">Science&Technology Books</a></li>
+                        <li><a class="dropdown-item" href="#psychology">Psychology Books</a></li>
+                        <li><a class="dropdown-item" href="#history">History Books</a></li>
+                        <li><a class="dropdown-item" href="#adventure">Adventure Books</a></li>
+                        <li><a class="dropdown-item" href="#biography">Autobiography/biography Books</a></li>
+                        <li><a class="dropdown-item" href="#selfhelp">Self-help Books</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="billcalculator.html">Billcalculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="signupandlogin.html">Signup/Login</a></li>
+            </ul>
+        </div>
+    <input type="text" id="searchBar" placeholder="Search books..." class="form-control me-2 w-25">
+    <button onclick="searchBooks()" class="btn btn-primary">Search</button>
+</div>
+
+</nav>
+
+    <!-- Content Section -->
+
+<div class="container" id="bookList">
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="romancebook">ROMANCE BOOKS</h2>
+                <div class="row">
+                    
+                    <!-- Book Items (30 books) -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/don_quixote.jpg" class="card-img-top" alt="Don Quixote">
+                            <div class="card-body">
+                                <h5 class="card-title">Don Quixote</h5>
+                                <p class="card-text">Rs 100.00</p>
+                                <button onclick="addToCart('Don Quixote', 100.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Don Quixote', 100.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/pride_prejudice.jpg" class="card-img-top" alt="Pride and Prejudice">
+                            <div class="card-body">
+                                <h5 class="card-title">Pride and Prejudice</h5>
+                                <p class="card-text">Rs 120.00</p>
+                                <button onclick="addToCart('Pride and Prejudice', 120.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Pride and Prejudice', 120.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/wuthering_heights.jpg" class="card-img-top" alt="Wuthering Heights">
+                            <div class="card-body">
+                                <h5 class="card-title">Wuthering Heights</h5>
+                                <p class="card-text">Rs 150.00</p>
+                                <button onclick="addToCart('Wuthering Heights', 150.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Wuthering Heights', 150.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/romeo_juliet.jpg" class="card-img-top" alt="Romeo and Juliet">
+                            <div class="card-body">
+                                <h5 class="card-title">Romeo and Juliet</h5>
+                                <p class="card-text">Rs 130.00</p>
+                                <button onclick="addToCart('Romeo and Juliet', 130.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Romeo and Juliet', 130.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_notebook.jpg" class="card-img-top" alt="The Notebook">
+                            <div class="card-body">
+                                <h5 class="card-title">The Notebook</h5>
+                                <p class="card-text">Rs 200.00</p>
+                                <button onclick="addToCart('The Notebook', 200.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Notebook', 200.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/me_before_you.jpg" class="card-img-top" alt="Me Before You">
+                            <div class="card-body">
+                                <h5 class="card-title">Me Before You</h5>
+                                <p class="card-text">Rs 180.00</p>
+                                <button onclick="addToCart('Me Before You', 180.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Me Before You', 180.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Repeat similar blocks for 24 more books -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="horrorbook">HORROR BOOKS</h2>
+                <div class="row">
+                    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/it.jpg" class="card-img-top" alt="It">
+                            <div class="card-body">
+                                <h5 class="card-title">It</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('It', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('It', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/dracula.jpg" class="card-img-top" alt="Dracula">
+                            <div class="card-body">
+                                <h5 class="card-title">Dracula</h5>
+                                <p class="card-text">Rs 200.00</p>
+                                <button onclick="addToCart('Dracula', 200.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Dracula', 200.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_shining.jpg" class="card-img-top" alt="The Shining">
+                            <div class="card-body">
+                                <h5 class="card-title">The Shining</h5>
+                                <p class="card-text">Rs 220.00</p>
+                                <button onclick="addToCart('The Shining', 220.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Shining', 220.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/frankenstein.jpg" class="card-img-top" alt="Frankenstein">
+                            <div class="card-body">
+                                <h5 class="card-title">Frankenstein</h5>
+                                <p class="card-text">Rs 180.00</p>
+                                <button onclick="addToCart('Frankenstein', 180.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Frankenstein', 180.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_exorcist.jpg" class="card-img-top" alt="The Exorcist">
+                            <div class="card-body">
+                                <h5 class="card-title">The Exorcist</h5>
+                                <p class="card-text">Rs 210.00</p>
+                                <button onclick="addToCart('The Exorcist', 210.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Exorcist', 210.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_silent_companions.jpg" class="card-img-top" alt="The Silent Companions">
+                            <div class="card-body">
+                                <h5 class="card-title">The Silent Companions</h5>
+                                <p class="card-text">Rs 190.00</p>
+                                <button onclick="addToCart('The Silent Companions', 190.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Silent Companions', 190.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_house_next_door.jpg" class="card-img-top" alt="The House Next Door">
+                            <div class="card-body">
+                                <h5 class="card-title">The House Next Door</h5>
+                                <p class="card-text">Rs 170.00</p>
+                                <button onclick="addToCart('The House Next Door', 170.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The House Next Door', 170.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_haunting_of_hill_house.jpg" class="card-img-top" alt="The Haunting of Hill House">
+                            <div class="card-body">
+                                <h5 class="card-title">The Haunting of Hill House</h5>
+                                <p class="card-text">Rs 195.00</p>
+                                <button onclick="addToCart('The Haunting of Hill House', 195.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Haunting of Hill House', 195.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books here in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="thrillerbook">MYSTERY & THRILLER BOOKS</h2>
+                <div class="row">
+                    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/gone_girl.jpg" class="card-img-top" alt="Gone Girl">
+                            <div class="card-body">
+                                <h5 class="card-title">Gone Girl</h5>
+                                <p class="card-text">Rs 220.00</p>
+                                <button onclick="addToCart('Gone Girl', 220.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Gone Girl', 220.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_girl_with_the_dragon_tattoo.jpg" class="card-img-top" alt="The Girl with the Dragon Tattoo">
+                            <div class="card-body">
+                                <h5 class="card-title">The Girl with the Dragon Tattoo</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('The Girl with the Dragon Tattoo', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Girl with the Dragon Tattoo', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_da_vinci_code.jpg" class="card-img-top" alt="The Da Vinci Code">
+                            <div class="card-body">
+                                <h5 class="card-title">The Da Vinci Code</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('The Da Vinci Code', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Da Vinci Code', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_silent_patient.jpg" class="card-img-top" alt="The Silent Patient">
+                            <div class="card-body">
+                                <h5 class="card-title">The Silent Patient</h5>
+                                <p class="card-text">Rs 270.00</p>
+                                <button onclick="addToCart('The Silent Patient', 270.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Silent Patient', 270.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/shutter_island.jpg" class="card-img-top" alt="Shutter Island">
+                            <div class="card-body">
+                                <h5 class="card-title">Shutter Island</h5>
+                                <p class="card-text">Rs 210.00</p>
+                                <button onclick="addToCart('Shutter Island', 210.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Shutter Island', 210.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/rebecca.jpg" class="card-img-top" alt="Rebecca">
+                            <div class="card-body">
+                                <h5 class="card-title">Rebecca</h5>
+                                <p class="card-text">Rs 230.00</p>
+                                <button onclick="addToCart('Rebecca', 230.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Rebecca', 230.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_woman_in_the_window.jpg" class="card-img-top" alt="The Woman in the Window">
+                            <div class="card-body">
+                                <h5 class="card-title">The Woman in the Window</h5>
+                                <p class="card-text">Rs 260.00</p>
+                                <button onclick="addToCart('The Woman in the Window', 260.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Woman in the Window', 260.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/in_the_woods.jpg" class="card-img-top" alt="In the Woods">
+                            <div class="card-body">
+                                <h5 class="card-title">In the Woods</h5>
+                                <p class="card-text">Rs 240.00</p>
+                                <button onclick="addToCart('In the Woods', 240.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('In the Woods', 240.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books here in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                            
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="childrenbook">CHILDREN’S BOOKS</h2>
+                <div class="row">
+                    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_very_hungry_caterpillar.jpg" class="card-img-top" alt="The Very Hungry Caterpillar">
+                            <div class="card-body">
+                                <h5 class="card-title">The Very Hungry Caterpillar</h5>
+                                <p class="card-text">Rs 150.00</p>
+                                <button onclick="addToCart('The Very Hungry Caterpillar', 150.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Very Hungry Caterpillar', 150.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/where_the_wild_things_are.jpg" class="card-img-top" alt="Where the Wild Things Are">
+                            <div class="card-body">
+                                <h5 class="card-title">Where the Wild Things Are</h5>
+                                <p class="card-text">Rs 180.00</p>
+                                <button onclick="addToCart('Where the Wild Things Are', 180.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Where the Wild Things Are', 180.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/charlottes_web.jpg" class="card-img-top" alt="Charlotte's Web">
+                            <div class="card-body">
+                                <h5 class="card-title">Charlotte's Web</h5>
+                                <p class="card-text">Rs 200.00</p>
+                                <button onclick="addToCart('Charlotte\'s Web', 200.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Charlotte\'s Web', 200.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/harry_potter_and_the_sorcerers_stone.jpg" class="card-img-top" alt="Harry Potter and the Sorcerer's Stone">
+                            <div class="card-body">
+                                <h5 class="card-title">Harry Potter and the Sorcerer's Stone</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('Harry Potter and the Sorcerer\'s Stone', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Harry Potter and the Sorcerer\'s Stone', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_gruffalo.jpg" class="card-img-top" alt="The Gruffalo">
+                            <div class="card-body">
+                                <h5 class="card-title">The Gruffalo</h5>
+                                <p class="card-text">Rs 170.00</p>
+                                <button onclick="addToCart('The Gruffalo', 170.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Gruffalo', 170.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/matilda.jpg" class="card-img-top" alt="Matilda">
+                            <div class="card-body">
+                                <h5 class="card-title">Matilda</h5>
+                                <p class="card-text">Rs 190.00</p>
+                                <button onclick="addToCart('Matilda', 190.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Matilda', 190.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_cat_in_the_hat.jpg" class="card-img-top" alt="The Cat in the Hat">
+                            <div class="card-body">
+                                <h5 class="card-title">The Cat in the Hat</h5>
+                                <p class="card-text">Rs 160.00</p>
+                                <button onclick="addToCart('The Cat in the Hat', 160.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Cat in the Hat', 160.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_witches.jpg" class="card-img-top" alt="The Witches">
+                            <div class="card-body">
+                                <h5 class="card-title">The Witches</h5>
+                                <p class="card-text">Rs 210.00</p>
+                                <button onclick="addToCart('The Witches', 210.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Witches', 210.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books here in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="comic">COMIC BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/spiderman.jpg" class="card-img-top" alt="The Amazing Spider-Man">
+                            <div class="card-body">
+                                <h5 class="card-title">The Amazing Spider-Man</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('The Amazing Spider-Man', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Amazing Spider-Man', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/batman.jpg" class="card-img-top" alt="Batman: The Killing Joke">
+                            <div class="card-body">
+                                <h5 class="card-title">Batman: The Killing Joke</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('Batman: The Killing Joke', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Batman: The Killing Joke', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/xmen.jpg" class="card-img-top" alt="X-Men: Dark Phoenix Saga">
+                            <div class="card-body">
+                                <h5 class="card-title">X-Men: Dark Phoenix Saga</h5>
+                                <p class="card-text">Rs 270.00</p>
+                                <button onclick="addToCart('X-Men: Dark Phoenix Saga', 270.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('X-Men: Dark Phoenix Saga', 270.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/deadpool.jpg" class="card-img-top" alt="Deadpool: The Merc with a Mouth">
+                            <div class="card-body">
+                                <h5 class="card-title">Deadpool: The Merc with a Mouth</h5>
+                                <p class="card-text">Rs 260.00</p>
+                                <button onclick="addToCart('Deadpool: The Merc with a Mouth', 260.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Deadpool: The Merc with a Mouth', 260.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/superman.jpg" class="card-img-top" alt="Superman: Red Son">
+                            <div class="card-body">
+                                <h5 class="card-title">Superman: Red Son</h5>
+                                <p class="card-text">Rs 280.00</p>
+                                <button onclick="addToCart('Superman: Red Son', 280.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Superman: Red Son', 280.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_flash.jpg" class="card-img-top" alt="The Flash: Rebirth">
+                            <div class="card-body">
+                                <h5 class="card-title">The Flash: Rebirth</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('The Flash: Rebirth', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Flash: Rebirth', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/wonder_woman.jpg" class="card-img-top" alt="Wonder Woman: The Hiketeia">
+                            <div class="card-body">
+                                <h5 class="card-title">Wonder Woman: The Hiketeia</h5>
+                                <p class="card-text">Rs 260.00</p>
+                                <button onclick="addToCart('Wonder Woman: The Hiketeia', 260.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Wonder Woman: The Hiketeia', 260.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_avengers.jpg" class="card-img-top" alt="The Avengers: Infinity War Prelude">
+                            <div class="card-body">
+                                <h5 class="card-title">The Avengers: Infinity War Prelude</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('The Avengers: Infinity War Prelude', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Avengers: Infinity War Prelude', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="fantasy">FANTASY BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/harry_potter.jpg" class="card-img-top" alt="Harry Potter and the Sorcerer's Stone">
+                            <div class="card-body">
+                                <h5 class="card-title">Harry Potter and the Sorcerer's Stone</h5>
+                                <p class="card-text">Rs 350.00</p>
+                                <button onclick="addToCart('Harry Potter and the Sorcerer\'s Stone', 350.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Harry Potter and the Sorcerer\'s Stone', 350.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/lord_of_the_rings.jpg" class="card-img-top" alt="The Lord of the Rings">
+                            <div class="card-body">
+                                <h5 class="card-title">The Lord of the Rings</h5>
+                                <p class="card-text">Rs 500.00</p>
+                                <button onclick="addToCart('The Lord of the Rings', 500.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Lord of the Rings', 500.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/game_of_thrones.jpg" class="card-img-top" alt="A Game of Thrones">
+                            <div class="card-body">
+                                <h5 class="card-title">A Game of Thrones</h5>
+                                <p class="card-text">Rs 450.00</p>
+                                <button onclick="addToCart('A Game of Thrones', 450.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('A Game of Thrones', 450.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/percy_jackson.jpg" class="card-img-top" alt="Percy Jackson & The Olympians">
+                            <div class="card-body">
+                                <h5 class="card-title">Percy Jackson & The Olympians</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('Percy Jackson & The Olympians', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Percy Jackson & The Olympians', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_hobbit.jpg" class="card-img-top" alt="The Hobbit">
+                            <div class="card-body">
+                                <h5 class="card-title">The Hobbit</h5>
+                                <p class="card-text">Rs 320.00</p>
+                                <button onclick="addToCart('The Hobbit', 320.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Hobbit', 320.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/mistborn.jpg" class="card-img-top" alt="Mistborn: The Final Empire">
+                            <div class="card-body">
+                                <h5 class="card-title">Mistborn: The Final Empire</h5>
+                                <p class="card-text">Rs 380.00</p>
+                                <button onclick="addToCart('Mistborn: The Final Empire', 380.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Mistborn: The Final Empire', 380.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/eragon.jpg" class="card-img-top" alt="Eragon">
+                            <div class="card-body">
+                                <h5 class="card-title">Eragon</h5>
+                                <p class="card-text">Rs 310.00</p>
+                                <button onclick="addToCart('Eragon', 310.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Eragon', 310.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/narnia.jpg" class="card-img-top" alt="The Chronicles of Narnia">
+                            <div class="card-body">
+                                <h5 class="card-title">The Chronicles of Narnia</h5>
+                                <p class="card-text">Rs 360.00</p>
+                                <button onclick="addToCart('The Chronicles of Narnia', 360.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Chronicles of Narnia', 360.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="disneybook">DISNEY BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/lion_king.jpg" class="card-img-top" alt="The Lion King">
+                            <div class="card-body">
+                                <h5 class="card-title">The Lion King</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('The Lion King', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Lion King', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/frozen.jpg" class="card-img-top" alt="Frozen">
+                            <div class="card-body">
+                                <h5 class="card-title">Frozen</h5>
+                                <p class="card-text">Rs 280.00</p>
+                                <button onclick="addToCart('Frozen', 280.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Frozen', 280.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/aladdin.jpg" class="card-img-top" alt="Aladdin">
+                            <div class="card-body">
+                                <h5 class="card-title">Aladdin</h5>
+                                <p class="card-text">Rs 260.00</p>
+                                <button onclick="addToCart('Aladdin', 260.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Aladdin', 260.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/cinderella.jpg" class="card-img-top" alt="Cinderella">
+                            <div class="card-body">
+                                <h5 class="card-title">Cinderella</h5>
+                                <p class="card-text">Rs 240.00</p>
+                                <button onclick="addToCart('Cinderella', 240.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Cinderella', 240.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/beauty_and_the_beast.jpg" class="card-img-top" alt="Beauty and the Beast">
+                            <div class="card-body">
+                                <h5 class="card-title">Beauty and the Beast</h5>
+                                <p class="card-text">Rs 270.00</p>
+                                <button onclick="addToCart('Beauty and the Beast', 270.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Beauty and the Beast', 270.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/tangled.jpg" class="card-img-top" alt="Tangled">
+                            <div class="card-body">
+                                <h5 class="card-title">Tangled</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('Tangled', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Tangled', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/mickey_mouse.jpg" class="card-img-top" alt="Mickey Mouse Adventures">
+                            <div class="card-body">
+                                <h5 class="card-title">Mickey Mouse Adventures</h5>
+                                <p class="card-text">Rs 230.00</p>
+                                <button onclick="addToCart('Mickey Mouse Adventures', 230.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Mickey Mouse Adventures', 230.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/moana.jpg" class="card-img-top" alt="Moana">
+                            <div class="card-body">
+                                <h5 class="card-title">Moana</h5>
+                                <p class="card-text">Rs 275.00</p>
+                                <button onclick="addToCart('Moana', 275.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Moana', 275.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="scienceandtechnology">SCIENCE & TECHNOLOGY BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/a_brief_history_of_time.jpg" class="card-img-top" alt="A Brief History of Time">
+                            <div class="card-body">
+                                <h5 class="card-title">A Brief History of Time</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('A Brief History of Time', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('A Brief History of Time', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_selfish_gene.jpg" class="card-img-top" alt="The Selfish Gene">
+                            <div class="card-body">
+                                <h5 class="card-title">The Selfish Gene</h5>
+                                <p class="card-text">Rs 280.00</p>
+                                <button onclick="addToCart('The Selfish Gene', 280.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Selfish Gene', 280.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/elon_musk.jpg" class="card-img-top" alt="Elon Musk: Tesla, SpaceX">
+                            <div class="card-body">
+                                <h5 class="card-title">Elon Musk: Tesla, SpaceX</h5>
+                                <p class="card-text">Rs 350.00</p>
+                                <button onclick="addToCart('Elon Musk: Tesla, SpaceX', 350.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Elon Musk: Tesla, SpaceX', 350.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_feynman_lectures.jpg" class="card-img-top" alt="The Feynman Lectures on Physics">
+                            <div class="card-body">
+                                <h5 class="card-title">The Feynman Lectures on Physics</h5>
+                                <p class="card-text">Rs 400.00</p>
+                                <button onclick="addToCart('The Feynman Lectures on Physics', 400.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Feynman Lectures on Physics', 400.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/astrophysics_for_people.jpg" class="card-img-top" alt="Astrophysics for People in a Hurry">
+                            <div class="card-body">
+                                <h5 class="card-title">Astrophysics for People in a Hurry</h5>
+                                <p class="card-text">Rs 320.00</p>
+                                <button onclick="addToCart('Astrophysics for People in a Hurry', 320.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Astrophysics for People in a Hurry', 320.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_gene.jpg" class="card-img-top" alt="The Gene: An Intimate History">
+                            <div class="card-body">
+                                <h5 class="card-title">The Gene: An Intimate History</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('The Gene: An Intimate History', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Gene: An Intimate History', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/artificial_intelligence.jpg" class="card-img-top" alt="Artificial Intelligence: A Guide">
+                            <div class="card-body">
+                                <h5 class="card-title">Artificial Intelligence: A Guide</h5>
+                                <p class="card-text">Rs 310.00</p>
+                                <button onclick="addToCart('Artificial Intelligence: A Guide', 310.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Artificial Intelligence: A Guide', 310.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/clean_code.jpg" class="card-img-top" alt="Clean Code">
+                            <div class="card-body">
+                                <h5 class="card-title">Clean Code</h5>
+                                <p class="card-text">Rs 350.00</p>
+                                <button onclick="addToCart('Clean Code', 350.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Clean Code', 350.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="psychology">PSYCHOLOGY BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/thinking_fast_and_slow.jpg" class="card-img-top" alt="Thinking, Fast and Slow">
+                            <div class="card-body">
+                                <h5 class="card-title">Thinking, Fast and Slow</h5>
+                                <p class="card-text">Rs 350.00</p>
+                                <button onclick="addToCart('Thinking, Fast and Slow', 350.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Thinking, Fast and Slow', 350.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_psychology_of_money.jpg" class="card-img-top" alt="The Psychology of Money">
+                            <div class="card-body">
+                                <h5 class="card-title">The Psychology of Money</h5>
+                                <p class="card-text">Rs 280.00</p>
+                                <button onclick="addToCart('The Psychology of Money', 280.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Psychology of Money', 280.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/influence.jpg" class="card-img-top" alt="Influence: The Psychology of Persuasion">
+                            <div class="card-body">
+                                <h5 class="card-title">Influence: The Psychology of Persuasion</h5>
+                                <p class="card-text">Rs 320.00</p>
+                                <button onclick="addToCart('Influence: The Psychology of Persuasion', 320.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Influence: The Psychology of Persuasion', 320.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_power_of_habit.jpg" class="card-img-top" alt="The Power of Habit">
+                            <div class="card-body">
+                                <h5 class="card-title">The Power of Habit</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('The Power of Habit', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Power of Habit', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/atomic_habits.jpg" class="card-img-top" alt="Atomic Habits">
+                            <div class="card-body">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('Atomic Habits', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Atomic Habits', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_subtle_art_of_not_giving_a_f.jpg" class="card-img-top" alt="The Subtle Art of Not Giving a F*ck">
+                            <div class="card-body">
+                                <h5 class="card-title">The Subtle Art of Not Giving a F*ck</h5>
+                                <p class="card-text">Rs 310.00</p>
+                                <button onclick="addToCart('The Subtle Art of Not Giving a F*ck', 310.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Subtle Art of Not Giving a F*ck', 310.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/grit.jpg" class="card-img-top" alt="Grit: The Power of Passion and Perseverance">
+                            <div class="card-body">
+                                <h5 class="card-title">Grit: The Power of Passion and Perseverance</h5>
+                                <p class="card-text">Rs 320.00</p>
+                                <button onclick="addToCart('Grit: The Power of Passion and Perseverance', 320.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Grit: The Power of Passion and Perseverance', 320.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/mindset.jpg" class="card-img-top" alt="Mindset: The New Psychology of Success">
+                            <div class="card-body">
+                                <h5 class="card-title">Mindset: The New Psychology of Success</h5>
+                                <p class="card-text">Rs 330.00</p>
+                                <button onclick="addToCart('Mindset: The New Psychology of Success', 330.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Mindset: The New Psychology of Success', 330.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="history">HISTORY BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/sapiens.jpg" class="card-img-top" alt="Sapiens: A Brief History of Humankind">
+                            <div class="card-body">
+                                <h5 class="card-title">Sapiens: A Brief History of Humankind</h5>
+                                <p class="card-text">Rs 450.00</p>
+                                <button onclick="addToCart('Sapiens', 450.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Sapiens', 450.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/guns_germs_steel.jpg" class="card-img-top" alt="Guns, Germs, and Steel">
+                            <div class="card-body">
+                                <h5 class="card-title">Guns, Germs, and Steel</h5>
+                                <p class="card-text">Rs 380.00</p>
+                                <button onclick="addToCart('Guns, Germs, and Steel', 380.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Guns, Germs, and Steel', 380.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_silk_roads.jpg" class="card-img-top" alt="The Silk Roads">
+                            <div class="card-body">
+                                <h5 class="card-title">The Silk Roads</h5>
+                                <p class="card-text">Rs 400.00</p>
+                                <button onclick="addToCart('The Silk Roads', 400.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Silk Roads', 400.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/a_people_history.jpg" class="card-img-top" alt="A People's History of the United States">
+                            <div class="card-body">
+                                <h5 class="card-title">A People's History of the United States</h5>
+                                <p class="card-text">Rs 390.00</p>
+                                <button onclick="addToCart('A People\'s History', 390.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('A People\'s History', 390.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/1491.jpg" class="card-img-top" alt="1491: New Revelations of the Americas Before Columbus">
+                            <div class="card-body">
+                                <h5 class="card-title">1491: New Revelations of the Americas Before Columbus</h5>
+                                <p class="card-text">Rs 370.00</p>
+                                <button onclick="addToCart('1491', 370.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('1491', 370.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_wright_brothers.jpg" class="card-img-top" alt="The Wright Brothers">
+                            <div class="card-body">
+                                <h5 class="card-title">The Wright Brothers</h5>
+                                <p class="card-text">Rs 320.00</p>
+                                <button onclick="addToCart('The Wright Brothers', 320.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Wright Brothers', 320.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_diary_of_a_young_girl.jpg" class="card-img-top" alt="The Diary of a Young Girl">
+                            <div class="card-body">
+                                <h5 class="card-title">The Diary of a Young Girl</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('The Diary of a Young Girl', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Diary of a Young Girl', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/a_short_history_of_nearly_everything.jpg" class="card-img-top" alt="A Short History of Nearly Everything">
+                            <div class="card-body">
+                                <h5 class="card-title">A Short History of Nearly Everything</h5>
+                                <p class="card-text">Rs 420.00</p>
+                                <button onclick="addToCart('A Short History of Nearly Everything', 420.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('A Short History of Nearly Everything', 420.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="adventure">ADVENTURE BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_call_of_the_wild.jpg" class="card-img-top" alt="The Call of the Wild">
+                            <div class="card-body">
+                                <h5 class="card-title">The Call of the Wild</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('The Call of the Wild', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Call of the Wild', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/into_the_wild.jpg" class="card-img-top" alt="Into the Wild">
+                            <div class="card-body">
+                                <h5 class="card-title">Into the Wild</h5>
+                                <p class="card-text">Rs 280.00</p>
+                                <button onclick="addToCart('Into the Wild', 280.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Into the Wild', 280.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/treasure_island.jpg" class="card-img-top" alt="Treasure Island">
+                            <div class="card-body">
+                                <h5 class="card-title">Treasure Island</h5>
+                                <p class="card-text">Rs 220.00</p>
+                                <button onclick="addToCart('Treasure Island', 220.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Treasure Island', 220.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_hobbit.jpg" class="card-img-top" alt="The Hobbit">
+                            <div class="card-body">
+                                <h5 class="card-title">The Hobbit</h5>
+                                <p class="card-text">Rs 350.00</p>
+                                <button onclick="addToCart('The Hobbit', 350.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Hobbit', 350.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/moby_dick.jpg" class="card-img-top" alt="Moby-Dick">
+                            <div class="card-body">
+                                <h5 class="card-title">Moby-Dick</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('Moby-Dick', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Moby-Dick', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_lost_city_of_z.jpg" class="card-img-top" alt="The Lost City of Z">
+                            <div class="card-body">
+                                <h5 class="card-title">The Lost City of Z</h5>
+                                <p class="card-text">Rs 330.00</p>
+                                <button onclick="addToCart('The Lost City of Z', 330.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Lost City of Z', 330.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/life_of_pi.jpg" class="card-img-top" alt="Life of Pi">
+                            <div class="card-body">
+                                <h5 class="card-title">Life of Pi</h5>
+                                <p class="card-text">Rs 310.00</p>
+                                <button onclick="addToCart('Life of Pi', 310.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Life of Pi', 310.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/around_the_world_in_80_days.jpg" class="card-img-top" alt="Around the World in 80 Days">
+                            <div class="card-body">
+                                <h5 class="card-title">Around the World in 80 Days</h5>
+                                <p class="card-text">Rs 260.00</p>
+                                <button onclick="addToCart('Around the World in 80 Days', 260.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Around the World in 80 Days', 260.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="biography">AUTOBIOGRAPHY & BIOGRAPHY BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_diary_of_a_young_girl.jpg" class="card-img-top" alt="The Diary of a Young Girl">
+                            <div class="card-body">
+                                <h5 class="card-title">The Diary of a Young Girl</h5>
+                                <p class="card-text">Rs 200.00</p>
+                                <button onclick="addToCart('The Diary of a Young Girl', 200.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Diary of a Young Girl', 200.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/long_walk_to_freedom.jpg" class="card-img-top" alt="Long Walk to Freedom">
+                            <div class="card-body">
+                                <h5 class="card-title">Long Walk to Freedom</h5>
+                                <p class="card-text">Rs 350.00</p>
+                                <button onclick="addToCart('Long Walk to Freedom', 350.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Long Walk to Freedom', 350.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/becoming.jpg" class="card-img-top" alt="Becoming">
+                            <div class="card-body">
+                                <h5 class="card-title">Becoming</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('Becoming', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Becoming', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_story_of_my_experiments_with_truth.jpg" class="card-img-top" alt="The Story of My Experiments with Truth">
+                            <div class="card-body">
+                                <h5 class="card-title">The Story of My Experiments with Truth</h5>
+                                <p class="card-text">Rs 270.00</p>
+                                <button onclick="addToCart('The Story of My Experiments with Truth', 270.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Story of My Experiments with Truth', 270.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/steve_jobs.jpg" class="card-img-top" alt="Steve Jobs">
+                            <div class="card-body">
+                                <h5 class="card-title">Steve Jobs</h5>
+                                <p class="card-text">Rs 320.00</p>
+                                <button onclick="addToCart('Steve Jobs', 320.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Steve Jobs', 320.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/i_am_malala.jpg" class="card-img-top" alt="I Am Malala">
+                            <div class="card-body">
+                                <h5 class="card-title">I Am Malala</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('I Am Malala', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('I Am Malala', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/elon_musk.jpg" class="card-img-top" alt="Elon Musk">
+                            <div class="card-body">
+                                <h5 class="card-title">Elon Musk</h5>
+                                <p class="card-text">Rs 340.00</p>
+                                <button onclick="addToCart('Elon Musk', 340.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Elon Musk', 340.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/when_breath_becomes_air.jpg" class="card-img-top" alt="When Breath Becomes Air">
+                            <div class="card-body">
+                                <h5 class="card-title">When Breath Becomes Air</h5>
+                                <p class="card-text">Rs 310.00</p>
+                                <button onclick="addToCart('When Breath Becomes Air', 310.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('When Breath Becomes Air', 310.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="col-md-12">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center my-4" id="selfhelp">SELF-HELP BOOKS</h2>
+                <div class="row">
+    
+                    <!-- Book 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_power_of_now.jpg" class="card-img-top" alt="The Power of Now">
+                            <div class="card-body">
+                                <h5 class="card-title">The Power of Now</h5>
+                                <p class="card-text">Rs 250.00</p>
+                                <button onclick="addToCart('The Power of Now', 250.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Power of Now', 250.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/atomic_habits.jpg" class="card-img-top" alt="Atomic Habits">
+                            <div class="card-body">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text">Rs 300.00</p>
+                                <button onclick="addToCart('Atomic Habits', 300.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Atomic Habits', 300.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_7_habits.jpg" class="card-img-top" alt="The 7 Habits of Highly Effective People">
+                            <div class="card-body">
+                                <h5 class="card-title">The 7 Habits of Highly Effective People</h5>
+                                <p class="card-text">Rs 280.00</p>
+                                <button onclick="addToCart('The 7 Habits of Highly Effective People', 280.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The 7 Habits of Highly Effective People', 280.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/how_to_win_friends.jpg" class="card-img-top" alt="How to Win Friends & Influence People">
+                            <div class="card-body">
+                                <h5 class="card-title">How to Win Friends & Influence People</h5>
+                                <p class="card-text">Rs 220.00</p>
+                                <button onclick="addToCart('How to Win Friends & Influence People', 220.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('How to Win Friends & Influence People', 220.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/think_and_grow_rich.jpg" class="card-img-top" alt="Think and Grow Rich">
+                            <div class="card-body">
+                                <h5 class="card-title">Think and Grow Rich</h5>
+                                <p class="card-text">Rs 270.00</p>
+                                <button onclick="addToCart('Think and Grow Rich', 270.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Think and Grow Rich', 270.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/you_are_a_badass.jpg" class="card-img-top" alt="You Are a Badass">
+                            <div class="card-body">
+                                <h5 class="card-title">You Are a Badass</h5>
+                                <p class="card-text">Rs 240.00</p>
+                                <button onclick="addToCart('You Are a Badass', 240.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('You Are a Badass', 240.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/mindset.jpg" class="card-img-top" alt="Mindset">
+                            <div class="card-body">
+                                <h5 class="card-title">Mindset</h5>
+                                <p class="card-text">Rs 290.00</p>
+                                <button onclick="addToCart('Mindset', 290.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('Mindset', 290.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Book 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="image/the_subtle_art.jpg" class="card-img-top" alt="The Subtle Art of Not Giving a F*ck">
+                            <div class="card-body">
+                                <h5 class="card-title">The Subtle Art of Not Giving a F*ck</h5>
+                                <p class="card-text">Rs 260.00</p>
+                                <button onclick="addToCart('The Subtle Art of Not Giving a F*ck', 260.00)" class="btn btn-primary">Add To Cart</button>
+                                <button class="btn btn-success" onclick="buyNow('The Subtle Art of Not Giving a F*ck', 260.00)">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add 22 more books in the same format -->
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+                            <div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="buyNowModalLabel">Confirm Your Purchase</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Book:</strong> <span id="selectedBook"></span></p>
+                                            <p><strong>Price:</strong> Rs <span id="selectedPrice"></span></p>
+                                            <form id="orderForm">
+                                                <div class="mb-3">
+                                                    <label for="customerName" class="form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="customerName" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="customerAddress" class="form-label">Address:</label>
+                                                    <input type="text" class="form-control" id="customerAddress" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="customerPhone" class="form-label">Phone:</label>
+                                                    <input type="tel" class="form-control" id="customerPhone" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="paymentMethod" class="form-label">Payment Method:</label>
+                                                    <select class="form-control" id="paymentMethod" required>
+                                                        <option value="Cash on Delivery">Cash on Delivery</option>
+                                                        <option value="Credit Card">Credit Card</option>
+                                                        <option value="UPI">UPI</option>
+                                                    </select>
+                                                </div>
+                                                <button type="submit" class="btn btn-success">Confirm Order</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    <footer>
+        <p>&copy; 2025 Boomadevi Bookstore. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

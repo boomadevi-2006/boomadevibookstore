@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOMADEVI BOOKSTORE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { margin: auto; border-collapse: collapse; width: 60%; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+        input { width: 100px; text-align: center; }
+        button { cursor: pointer; padding: 5px 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <header class="container p-5 my-5 text-center" style="background: url('image/hp.jpg') no-repeat center center; background-size: cover;">
+        <h1><img src="image/logo.jpg" alt="No Image" width="80" height="80" class="logo">
+            BOOMADEVI BOOKSTORE
+        </h1>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Boomadevi Bookstore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="billcalculator.html">Billcalculator</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signupandlogin.html">Signup/Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2>Book Store Bill Calculator</h2>
+    <table>
+        <thead>
+            <tr><th>Book Title</th><th>Qty</th><th>Price (₹)</th><th>Total (₹)</th><th>Remove</th></tr>
+        </thead>
+        <tbody id="billTable"></tbody>
+    </table>
+    <br>
+    <button onclick="addItem()">Add Book</button>
+    <h3>Total: ₹<span id="totalBill">0</span></h3>
+    <script>
+        function addItem() {
+            let row = document.createElement("tr");
+            let bookTitle = document.createElement("td");
+            let qty = document.createElement("td");
+            let price = document.createElement("td");
+            let total = document.createElement("td");
+            let removeCell = document.createElement("td");
+            
+            let titleInput = document.createElement("input");
+            titleInput.placeholder = "Book Title";
+            
+            let qtyInput = document.createElement("input");
+            qtyInput.type = "number";
+            qtyInput.value = 1;
+            qtyInput.min = 0;
+            
+            let priceInput = document.createElement("input");
+            priceInput.type = "number";
+            priceInput.value = 0;
+            priceInput.min = 0;
+            
+            let removeBtn = document.createElement("button");
+            removeBtn.textContent = "X";
+            
+            bookTitle.appendChild(titleInput);
+            qty.appendChild(qtyInput);
+            price.appendChild(priceInput);
+            total.textContent = "0";
+            removeCell.appendChild(removeBtn);
+            
+            row.appendChild(bookTitle);
+            row.appendChild(qty);
+            row.appendChild(price);
+            row.appendChild(total);
+            row.appendChild(removeCell);
+            
+            qtyInput.addEventListener("input", calculateTotal);
+            priceInput.addEventListener("input", calculateTotal);
+            removeBtn.addEventListener("click", function() {
+                row.remove();
+                calculateTotal();
+            });
+            
+            document.getElementById("billTable").appendChild(row);
+        }
+        
+        function calculateTotal() {
+            let rows = document.querySelectorAll("#billTable tr");
+            let total = 0;
+            for (let i = 0; i < rows.length; i++) {
+                let inputs = rows[i].querySelectorAll("input");
+                let sum = inputs[1].value * inputs[2].value;
+                rows[i].cells[3].textContent = sum || 0;
+                total += sum || 0;
+            }
+            document.getElementById("totalBill").textContent = total;
+        }
+    </script>
+</body>
+</html>

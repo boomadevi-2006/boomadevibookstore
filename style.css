@@ -1,0 +1,46 @@
+body {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    
+    /* Background Image */
+    background: url("../image/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    
+    /* Ensuring Text Visibility */
+    color: rgb(16, 14, 14); /* Change text color for better contrast */
+}
+
+/* Optional: Add a dark overlay effect */
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.carousel img {
+    border-radius: 10px;
+}
+
+.book-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.book-card {
+    margin-bottom: 20px;
+}
+
+.card-img-top{
+    max-width:300px;
+    height: 200px;
+  
+}
+/* Ensure content starts below the fixed navbar */
+.logo{
+     border-radius: 50%;
+
+}
