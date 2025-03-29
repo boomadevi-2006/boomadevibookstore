@@ -4,7 +4,7 @@ body {
     margin: 0;
     
     /* Background Image */
-    background: url("../image/bg.jpg") no-repeat center center fixed;
+    background: url("../bg.jpg") no-repeat center center fixed;
     background-size: cover;
     
     /* Ensuring Text Visibility */
